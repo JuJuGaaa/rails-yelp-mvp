@@ -1,0 +1,10 @@
+<div class="container">
+  <%= simple_form_for(@restaurant) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address, label: "Full address" %>
+    <%= f.input :phone_number %>
+    <%= f.input :category, collection: Restaurant::CATEGORIES %>
+    <%= f.submit %>
+  <% end %>
+  <%= link_to "Retour à la liste", restaurants_path %>
+</div>
